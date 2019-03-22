@@ -4,8 +4,16 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-$font-primary: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-$font-secondary: "Droid Serif", "Helvetica Neue", Helvetica,Arial,sans-serif;
+$font-primary: Montserrat,
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$font-secondary: "Droid Serif",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
 
 $color-primary: #fed136;
 $color-secondary: #fec503;
@@ -188,6 +196,8 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
     color: $color-primary;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -285,51 +295,62 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+
+    .intro-text {
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+        .intro-lead-in {
+            margin-bottom: 25px;
+            font-family: $font-secondary;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 22px;
+        }
+
+
+        .intro-lead-micro {
+            margin-bottom: 15px;
+            font-family: $font-primary;
+            font-size: 18px;
+            font-style: italic;
+            line-height: 18px;
+        }
+
+        .intro-heading {
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-family: $font-primary;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+        }
+    }
+
 }
 
-header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-family: $font-secondary;
-    font-size: 22px;
-    font-style: italic;
-    line-height: 22px;
-}
-
-header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: $font-primary;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
-}
 
 @media(min-width:768px) {
     header .intro-text {
         padding-top: 300px;
         padding-bottom: 200px;
-    }
 
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: $font-secondary;
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-    }
+        .intro-lead-in {
+            margin-bottom: 25px;
+            font-family: $font-secondary;
+            font-size: 40px;
+            font-style: italic;
+            line-height: 40px;
+        }
 
-    header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: $font-primary;
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
+        .intro-heading {
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            font-family: $font-primary;
+            font-size: 75px;
+            font-weight: 700;
+            line-height: 75px;
+        }
     }
 }
 
@@ -354,7 +375,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 100px 0;
     }
 }
 
@@ -649,22 +670,36 @@ section h3.section-subheading {
 .team-member {
     margin-bottom: 50px;
     text-align: center;
+
+    .img-responsive {
+        padding-top: 100%;
+        position: relative;
+        border: 7px solid #fff;
+        overflow: hidden;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    h4 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        text-transform: none;
+    }
+
+    p {
+        margin-top: 0;
+    }
 }
 
-.team-member img {
-    margin: 0 auto;
-    border: 7px solid #fff;
-}
-
-.team-member h4 {
-    margin-top: 25px;
-    margin-bottom: 0;
-    text-transform: none;
-}
-
-.team-member p {
-    margin-top: 0;
-}
 
 aside.clients img {
     margin: 50px auto;

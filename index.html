@@ -1,6 +1,5 @@
 ---
 
-
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
@@ -14,6 +13,55 @@ social:
   - title: github
     url: http://github.com/jekyll
 
+people:
+- name: Rizal Rahabillah
+  pic: rizal
+  position: CO Angkatan
+  social:
+    - title: instagram
+      url: #
+    - title: whatsapp
+      url: #
+- name: Hezkia Vialen
+  pic: vialen
+  position: Wakil CO
+  social:
+    - title: instagram
+      url: #
+    - title: whatsapp
+      url: #
+- name: Kusuma Gigih
+  pic: gigih
+  position: Korlap
+  social:
+    - title: instagram
+      url: #
+    - title: whatsapp
+      url: #
+- name: Denaya Yousi
+  pic: denaya
+  position: Sekretaris
+  social:
+    - title: instagram
+      url: #
+    - title: whatsapp
+      url: #
+- name: Nailatur Rohmah
+  pic: naila
+  position: Bendahara 1
+  social:
+    - title: instagram
+      url: #
+    - title: whatsapp
+      url: #
+- name: Kristiana Dewi
+  pic: dewi
+  position: Bendahara 2
+  social:
+    - title: instagram
+      url: #
+    - title: whatsapp
+      url: #
 # Postal address (add as many lines as necessary)
 address:
   - line: 3481 Melrose Place
@@ -27,12 +75,22 @@ address:
     <body id="page-top" class="index">
 
     {% include header.html %}
+
+    {% include preamble.html %}
+    {% include struktur.html %}
+    {% include filosofi.html %}
+    {% include logo.html %}
+    {% include kegiatan.html %}
+    {% include penutup.html %}
+
+    {% capture dump %}
     {% include services.html %}
     {% include portfolio_grid.html %}
     {% include about.html %}
     {% include team.html %}
     {% include clients.html %}
     {% include contact.html %}
+    {% endcapture %}
     {% include footer.html %}
     {% include modals.html %}
     {% include js.html %}

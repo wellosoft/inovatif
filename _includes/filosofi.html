@@ -1,0 +1,15 @@
+<section id="filosofi">
+	<div class="container">
+		<div class="row text-center">
+			<span style="font-size:50px">IN-O-VA-TIF</span>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			{% capture ctn %}
+			{% include content/filosofi.md %}
+			{% endcapture %}
+			{{ ctn | markdownify }}
+		</div>
+	</div>
+</section>
