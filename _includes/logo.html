@@ -1,15 +1,15 @@
-<section id="logo">
-	<div class="container">
-		<div class="row text-center">
-			<img src="img/logo.png" width="500px">
-		</div>
-	</div>
+<section id="logo" class="bg-light-gray">
 	<div class="container">
 		<div class="row">
-			{% capture ctn %}
-			{% include content/logo.md %}
-			{% endcapture %}
-			{{ ctn | markdownify }}
+			<div class="col-md-4 text-center">
+				<img src="img/logo.png" class="my-2" style="max-width: 60vw;width: 100%">
+			</div>
+			<div class="col-md-8">
+					{% capture ctn %}
+					{% include content/logo.md %}
+					{% endcapture %}
+					{{ ctn | markdownify }}
+			</div>
 		</div>
 	</div>
 </section>

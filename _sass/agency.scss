@@ -15,8 +15,8 @@ Helvetica,
 Arial,
 sans-serif;
 
-$color-primary: #fed136;
-$color-secondary: #fec503;
+$color-primary: #365bfe;
+$color-secondary: #031cfe;
 $color-secondary-dark: #333;
 $color-muted: #777;
 
@@ -37,7 +37,7 @@ body {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.75;
 }
 
@@ -355,7 +355,7 @@ header {
 }
 
 section {
-    padding: 100px 0;
+    padding: 100px 10px;
 }
 
 section h2.section-heading {
@@ -672,10 +672,16 @@ section h3.section-subheading {
     text-align: center;
 
     .img-responsive {
-        padding-top: 100%;
+        padding-top: 50vw;
+        max-width: 50vw;
+        margin: auto;
         position: relative;
         border: 7px solid #fff;
         overflow: hidden;
+
+        @media (min-width: 768px) {
+            padding-top: 100%;
+        }
     }
 
     img {
