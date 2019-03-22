@@ -1,6 +1,7 @@
 _site
 img
 _posts
+.sass-cache
 
 # Windows image file caches
 Thumbs.db

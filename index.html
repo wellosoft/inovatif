@@ -1,20 +1,41 @@
 ---
-layout: default
+
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/jekyllrb
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/jekyll
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 3481 Melrose Place
+  - line: Beverly Hills, CA 90210
 ---
+<!DOCTYPE html>
+<html>
 
-<div class="home">
+  {% include head.html %}
 
-  <h1>Posts</h1>
+    <body id="page-top" class="index">
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    {% include header.html %}
+    {% include services.html %}
+    {% include portfolio_grid.html %}
+    {% include about.html %}
+    {% include team.html %}
+    {% include clients.html %}
+    {% include contact.html %}
+    {% include footer.html %}
+    {% include modals.html %}
+    {% include js.html %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+    </body>
+</html>
